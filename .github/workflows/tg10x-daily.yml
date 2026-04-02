@@ -14,6 +14,8 @@ on:
     - cron: "33 0 * * *"
     # 7:35 PM EST = 00:35 UTC. During EDT: 7:35 PM Eastern = 23:35 UTC → "35 23 * * *"
     - cron: "35 0 * * *"
+    # 8:00 PM EST = 01:00 UTC. During EDT: 8:00 PM Eastern = 00:00 UTC → "0 0 * * *"
+    - cron: "0 1 * * *"
   workflow_dispatch:
 
 concurrency:
