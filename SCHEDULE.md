@@ -11,7 +11,7 @@ Runs in the cloud on a schedule (free for public repos; private repos get limite
    - `TG10X_EMAIL`
    - `TG10X_PASSWORD`
    - Optional: `TG10X_POST_TEXT`, `TG10X_BASE_URL`
-3. The workflow file is `.github/workflows/tg10x-daily.yml`. Edit the `cron` line for your time (**GitHub uses UTC only**). Current default: **7:30 AM EST** → `30 12 * * *` (12:30 UTC). In **EDT**, use `30 11 * * *` for 7:30 AM Eastern.
+3. The workflow file is `.github/workflows/tg10x-daily.yml`. Edit the `cron` lines for your time (**GitHub uses UTC only**). Current defaults: **7:30 AM EST** → `30 12 * * *`; **7:33 PM EST** → `33 0 * * *`; **7:35 PM EST** → `35 0 * * *`. In **EDT**, use `30 11 * * *` (morning), `33 23 * * *` and `35 23 * * *` (evenings) for the same local Eastern times.
 4. **Actions** → **TG10X daily post** → **Run workflow** to test once.
 
 **Notes:** Cron runs can be delayed a few minutes on GitHub’s free tier — for an exact one-off test, use **Run workflow**. Some sites block logins from cloud IPs; if the job always fails at login, use Task Scheduler on your PC or a self-hosted runner instead.
