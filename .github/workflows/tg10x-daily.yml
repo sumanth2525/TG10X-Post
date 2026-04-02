@@ -6,8 +6,9 @@ name: TG10X daily post
 
 on:
   schedule:
-    # 04:30 UTC daily (~10:00 IST). Edit as needed (GitHub uses UTC only).
-    - cron: "30 4 * * *"
+    # 7:30 AM Eastern Standard Time (EST) = 12:30 UTC. GitHub cron is UTC only.
+    # During EDT (daylight saving), 7:30 AM Eastern = 11:30 UTC → use "30 11 * * *" instead.
+    - cron: "30 12 * * *"
   workflow_dispatch:
 
 concurrency:
