@@ -1,0 +1,15 @@
+{
+  "name": "tg10x-playwright-automation",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "tg10x": "node scripts/tg10x-automation.mjs",
+    "tg10x:daily": "node scripts/tg10x-daily.mjs",
+    "install:chromium": "playwright install chromium"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "playwright": "^1.51.0"
+  }
+}
